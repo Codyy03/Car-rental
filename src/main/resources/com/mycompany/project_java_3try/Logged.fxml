@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="730.0" stylesheets="@logged_styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.project_java_3try.PrimaryController">
+   <center>
+      <GridPane fx:id="styledGridPane" hgap="10.0" prefHeight="310.0" prefWidth="489.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label styleClass="grid-cell" alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Marka:" />
+            <Label styleClass="grid-cell" alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Model:" GridPane.rowIndex="1" />
+            <Label styleClass="grid-cell" alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Rejestracja:" GridPane.rowIndex="2" />
+            <Label styleClass="grid-cell" alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Data Produkcji:" GridPane.rowIndex="3" />
+            <Label styleClass="grid-cell" alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Kolor:" GridPane.rowIndex="4" />
+            <Label styleClass="grid-cell" alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Cena:" GridPane.rowIndex="5" />
+            <Label styleClass="grid-cell" fx:id="lb1" alignment="CENTER" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" />
+            <Label styleClass="grid-cell" fx:id="lb2" alignment="CENTER" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label styleClass="grid-cell" fx:id="lb3" alignment="CENTER" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label styleClass="grid-cell" fx:id="lb4" alignment="CENTER" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label styleClass="grid-cell" fx:id="lb5" alignment="CENTER" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label styleClass="grid-cell" fx:id="lb6" alignment="CENTER" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <ChoiceBox fx:id="myChoiceBox" prefHeight="33.0" prefWidth="143.0" BorderPane.alignment="TOP_LEFT" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="22.0" prefHeight="94.0" prefWidth="154.0">
+               <children>
+                  <Button fx:id="userLoginButton" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="164.0" text="Tutaj nazwa użytkownika" />
+                  <Button mnemonicParsing="false" onAction="#switchToLogin" prefHeight="26.0" prefWidth="162.0" text="Wyloguj" />
+               </children>
+            </VBox>
+            <ButtonBar layoutX="23.0" layoutY="377.0" prefHeight="58.0" prefWidth="138.0">
+               <buttons>
+                <Button fx:id="rentButton" minWidth="40.0" mnemonicParsing="false" onAction="#rentCar" prefHeight="58.0" prefWidth="129.0" text="Wypożycz" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+            <Label fx:id="rentPriceNotification" alignment="CENTER" layoutX="18.0" layoutY="317.0" prefHeight="26.0" prefWidth="165.0" text="Cena wypożyczenia" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="rentPrice" alignment="CENTER" layoutX="31.0" layoutY="343.0" prefHeight="34.0" prefWidth="141.0" text="75000" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="carWasRent" alignment="CENTER" layoutX="8.0" layoutY="370.0" prefHeight="90.0" prefWidth="183.0" text="Auto jest już wypożyczone" textAlignment="JUSTIFY" visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateReturnCar" alignment="CENTER" layoutX="8.0" layoutY="440.0" prefHeight="50.0" prefWidth="183.0" text="Data oddania:  24.07.2024" textFill="RED" visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

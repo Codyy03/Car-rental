@@ -1,0 +1,85 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #3a3a3a, #2b2b2b 90%);
+}
+
+/* Stylizacja ChoiceBox */
+.choice-box {
+    -fx-background-color: #2b2b2b;
+    -fx-mark-color: white; 
+}
+
+/* Stylizacja rozwijanego menu ChoiceBox */
+.choice-box .list-cell {
+    -fx-background-color: #2b2b2b; 
+    -fx-text-fill: #ffffff; 
+}
+
+.choice-box .list-cell:filled:selected, .choice-box .list-cell:filled:hover {
+    -fx-background-color: #3a3a3a; 
+    -fx-text-fill: #ffffff; 
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.label#rentPriceNotification {
+    -fx-font-weight: bold;
+    -fx-font-size: 13.0;
+}
+
+.button#rentButton, .button {
+    -fx-font-weight: bold;
+    -fx-font-size: 15.0; 
+    -fx-text-fill: black; 
+    -fx-background-color: #666; 
+    -fx-background-radius: 5; 
+    -fx-padding: 10 20 10 20; 
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+    -fx-transition: background-color 0.2s, scale 0.2s, text-fill 0.2s; 
+}
+
+.button.rentButton:hover, .button:hover {
+    -fx-background-color: #2b2b2b; 
+    -fx-scale-x: 1.1; 
+    -fx-scale-y: 1.1; 
+    -fx-text-fill: white; 
+        -fx-transition: background-color 0.2s, scale 0.2s, text-fill 0.2s; 
+}
+
+#styledGridPane,#rentPriceNotification {
+    -fx-padding: 2vh;
+    -fx-margin: 10px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 38, 0, 0, 19),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.22), 12, 0, 0, 15);
+}
+
+#rentPriceNotification{
+        -fx-background-color: #3a3a3a;
+}
+.grid-cell {
+    -fx-background-color: #363636;
+    -fx-padding: 2vh;
+    -fx-margin: 10px;
+    -fx-border-radius: 10px; 
+    -fx-background-radius: 10px; 
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 38, 0, 0, 19),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.22), 12, 0, 0, 15);
+    -fx-min-height: 50px; 
+    -fx-pref-height: 50px; 
+}
+.button:hover{
+            -fx-transition: background-color 0.3s, scale 0.2s, text-fill 0.2s; 
+}
+#carWasRent{
+        -fx-text-fill: orange;
+}
+
+/*Lista dostępnych aut*/
+.choice-box .context-menu { -fx-background-color: #2b2b2b; }
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: #2b2b2b; }
